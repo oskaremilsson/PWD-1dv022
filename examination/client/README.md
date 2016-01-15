@@ -1,7 +1,3 @@
-In this examination assignment you are supposed to build what we call a "Personal Web Desktop" (PWD).  First of all, have a look at this recording to get a better view of the assignment.
-
-[Demo - Personal Web Desktop](https://youtu.be/zHFjfoUWONY)
-
 ## Requirements
 Please check that your application meets the requirements below before submitting your final version.
 
@@ -34,7 +30,6 @@ The following three applications should at least be included in the desktop appl
 * ~~The code shall be organized in appropriate modules~~
 
 ## The memory game application
-See [exercise/memory/README.md](https://github.com/1dv022/exercise/blob/memory/exercise/memory/README.md) for a description of this application.
 
 ### Functional requirements, Memory application:
 * ~~The user should be able to open and play multiple memory games simultaneously.~~
@@ -51,7 +46,6 @@ See [exercise/memory/README.md](https://github.com/1dv022/exercise/blob/memory/e
 The chat application shall be connected to other students chats via a web socket-server.
 
 ### The server
-The server address is: `ws://vhost3.lnu.se:20080/socket/`
 
 You connect to the server via web sockets and send messages using the json format:
 
@@ -66,10 +60,6 @@ You connect to the server via web sockets and send messages using the json forma
 ```
 The properties `type`, `data`, `username` and `key` are mandatory when **sending** a message to the server.
 The properties `type`, `data` and  `username` will always be present when you **receive** a message from the server. Additionally, all properties sent from one user will be echoed to all receiving clients.
-
-### The API-key
-To get the api-key to the chat application please log in at the [profile page](https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/course-information/profile-information/) on the course web page.
-The key is used to keep track of users of the application and to curb abuse.
 
 ### Heartbeat
 The web socket server will send a "heartbeat" message to keep the connection open. This message is sent every 40 seconds and have the following structure:
